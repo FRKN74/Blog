@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="author" content="Furkan ERPAY" />
+    <meta name="title" content=" Html5,Css3,Js" />
+
+    <!-- responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- for jquery:eklendi -->
+    <!-- for jquery -->
+
+
+    <!-- External Css -->
+    <link rel="stylesheet" href="css/template.css" />
+
+
+
+    <!-- internal css:Sadece ilgili sayfa için -->
+    <!-- Ctrl+F5 -->
+    <script>
+
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="44">
+    <!-- start codes -->
+
+    <!-- menu  start -->
+        <nav id="back-top" class="navbar   navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">LOGO</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aside-image">Hakkımızda</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#urunler" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Ürünler
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Laptop</a>
+                                <a class="dropdown-item" href="#">PC</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Tablet</a>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Genel
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" data-toggle="modal" data-target="#vki" href="#">VKİ</a>
+
+                                <a class="dropdown-item" data-toggle="modal" data-target="#registerId"
+                                    href="#">Register</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">...</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+
+
+    <!-- VKİ start -->
+    <div class="modal fade" id="vki" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <br>
+
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center ">Vucut Kitle indeksi</h4>
+                    <form action="#" method="get">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">Kilo:</div>
+                                <div class="col-md-10">
+
+                                    <div class="form-group">
+                                        <input id="kilo" type="text" class="form-control"
+                                            placeholder="kilonunuzu giriniz" autofocus autocomplete="true">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-2">Boy:</div>
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <input id="boy" type="text" class="form-control" placeholder="boyunuzu giriniz"
+                                            autofocus autocomplete="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <button id="vki_hesapla" class="btn btn-primary">Hesapla</button>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-2">Sonuc:</div>
+                                <div class="col-md-10">
+                                    <p id="sonuc"></p>
+                                    <p id="sonuc2"></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- vki end -->
+
+    <!-- register start -->
+    <!-- <div class="modal fade" name="registration" id="registerId" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="register_form" action="" method="get">
+                        <div class="form-group">
+                            <label for="name">Ad soyad en az 5 karakter giriniz</label>
+                            <input type="text" id="name" name="name" minlength="5" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email giriniz</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <input class="btn btn-danger" type="submit"  value="Temizle">
+                        <input class="btn btn-primary" type="submit"  value="Gönder">
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type=button class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+    <style>
+        input.error,
+        textarea.error {
+            border: 1px dashed red;
+            font-weight: 300;
+            color: red;
+        }
+
+        label.error.fail-alert {
+            border: 2px solid red;
+            border-radius: 4px;
+            line-height: 1;
+            padding: 2px 0 6px 6px;
+            background: blue;
+            color:yellow;
+        }
+
+        input.valid.success-alert {
+            border: 2px solid #4CAF50;
+            color: green;
+        }
+    </style>
+
+    <div class="modal fade" name="registration" id="registerId" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Üye Kayıt</h3>
+                    <form id="basic-form" action="" method="post">
+
+                        <div class="form-group">
+                            <input id="name" name="name" class="form-control" placeholder="en az 3 karakter giriniz">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password" name="password" class="form-control" placeholder="parolanız">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="email" name="email" class="form-control" placeholder="Emailinizi giriniz">
+                        </div>
+
+                        <div class="btn-group mt-3">
+                            <input type="reset" class="btn btn-danger mr-3" value="Temizle">
+                            <input type="submit" class="btn btn-primary" value="Gönder">
+                        </div>
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type=button class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- register end -->
+
+    <!-- register end -->
+
+
+    <!-- menu  finish -->
+
+    <!-- header  start -->
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="image/kod1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="image/kod2.png" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="image/kod3.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="image/kod4.jpg" alt="Third slide">
+                </div>
+                
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </header>
+    <!-- header  finish -->
+
+
+    <!-- main start -->
+    <main class="container" style="margin-top:3%">
+        <!-- ürünler -->
+        <section>
+            <h3 class="text-header">Ürünlerimiz</h3>
+            <!--  12/4=3-->
+            <div class="row">
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -2</h5>
+                            <img class="card-header-img" src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text line-clamp-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Dolore obcaecati ut est repudiandae distinctio quisquam officia commodi ipsam, provident
+                                ipsum mollitia, minima maiores eum vel! Eum, vitae minima. Dolorum, eaque!
+                                Ipsum nobis odio explicabo beatae quisquam! Expedita officia ullam distinctio quaerat
+                                quae dolor earum placeat provident error tempore aut sapiente iusto, omnis eos
+                                temporibus alias quos nostrum suscipit dolorum accusantium?
+                                Cupiditate illo perspiciatis dolorem consectetur id totam eius fugiat eligendi deserunt
+                                iste est non harum vitae tenetur cumque, praesentium quia enim reiciendis at? Eius ex
+                                aperiam ut ratione consequuntur dolorum.
+                                Placeat eaque rem delectus aut sequi, cupiditate quae laborum ullam, nobis, harum cum
+                                blanditiis. Hic, commodi repudiandae aut nostrum alias eligendi vel repellat dolore,
+                                eaque ipsa temporibus reprehenderit laudantium vero.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -3</h5>
+                            <img class="card-header-img" src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Dolores reprehenderit sapiente similique soluta harum ipsam esse doloremque nobis enim
+                                quod repellat assumenda dicta beatae minus pariatur ea, placeat ex repudiandae?
+                                Ad quam eius, neque praesentium illo odio. In minima reprehenderit vero et omnis,
+                                corporis ea. Sequi dolorum, reiciendis necessitatibus cumque, ipsam iste ex quo aut
+                                quidem nam tempore rem alias.
+                                Ipsum cumque veniam dolorum accusantium impedit accusamus corrupti reiciendis
+                                perferendis aliquam. Assumenda ipsam pariatur iure tempore, sapiente eum ratione qui
+                                facilis excepturi voluptatum? Repellat consequuntur minus suscipit sapiente enim vero.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -4</h5>
+                            <img class="card-header-img" src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text line-clamp-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Sunt sint a, suscipit quae architecto animi nam deleniti omnis nulla iste! Culpa ipsa
+                                odio unde nobis debitis aspernatur molestiae impedit corporis.
+                                Pariatur asperiores veritatis quos explicabo, mollitia nostrum incidunt. Modi ad
+                                architecto distinctio cum fugit, atque iste sint, facere ipsam aut amet, natus fuga
+                                temporibus! Ipsum laudantium ad accusamus odit soluta!
+                                Officia quod necessitatibus minima minus, consectetur quaerat repellendus harum aperiam
+                                corrupti doloremque illum enim exercitationem maxime voluptate temporibus commodi
+                                ducimus nobis fugiat? Perferendis officia iste itaque dolores unde, labore placeat?
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -2</h5>
+                            <img class="card-header-img " src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text card-text line-clamp-3">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Repellendus soluta in magnam saepe. Eum ipsa deserunt iure, possimus
+                                minima ullam excepturi adipisci necessitatibus eligendi officia accusantium provident
+                                officiis nam quae.
+                                Excepturi quasi minus velit explicabo officia molestias iste libero architecto? Aliquid
+                                optio quo nobis fugiat reiciendis ipsa debitis alias temporibus rerum voluptate
+                                laboriosam, quasi iure sed facere harum repudiandae odit.
+                                Sunt officiis id perspiciatis asperiores sed? Enim facere quasi voluptates
+                                necessitatibus unde error, nihil autem? Repellat fugiat, ab aut commodi adipisci omnis
+                                pariatur quidem repellendus rerum! Placeat dignissimos vel molestiae?
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -2</h5>
+                            <img class="card-header-img" src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text card-text line-clamp-3">Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ratione iure, ullam et, magnam ut ducimus dicta modi ipsum
+                                exercitationem enim inventore quae quisquam voluptatibus quidem perferendis nostrum
+                                veritatis, cumque recusandae!
+                                Amet dolores repellat sunt, consectetur, iste cum rem, saepe eaque quasi iure tenetur
+                                voluptatibus excepturi omnis beatae dicta autem laudantium harum ab ipsam fugit enim
+                                voluptas earum culpa. Deleniti, tempore.
+                                Nostrum impedit veniam fugiat, ducimus rerum sed? Quasi optio eligendi laborum modi quod
+                                dolores natus quae cupiditate vitae expedita fuga hic velit omnis quam dicta inventore
+                                odio, in aspernatur nam.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Header -2</h5>
+                            <img class="card-header-img" src="image/kod4.jpg" alt="resim yok">
+                            <p class="card-text card-text line-clamp-3">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Aliquid nobis tempora aperiam delectus dolorem est aliquam nihil illo
+                                omnis aspernatur, dolor cupiditate harum quaerat consectetur impedit necessitatibus enim
+                                vel soluta.
+                                Ea doloribus atque itaque. Voluptatem veritatis nulla expedita dolor error repellendus
+                                possimus velit iure et amet, perferendis deleniti deserunt nihil temporibus. Modi enim
+                                deserunt id quam temporibus! Tenetur, ex aperiam.
+                                Neque, earum repudiandae eveniet sapiente cumque suscipit iste! Nulla aliquam quod
+                                inventore nobis quas accusantium libero doloribus. Beatae quibusdam modi, accusantium
+                                consequuntur voluptatum placeat, at nihil vel, cumque tempore ex?
+                            </p>
+                            <a href="#" class="btn btn-primary">Go...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="aside-image">
+            <h3 class="text-header">Hakkımızda</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img src="image/kod5.png" style="height: 450px !important;" alt="">
+
+                    </div>
+                    <div class="col-md-5">
+                        <p id="aside-p">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore hic ducimus a
+                            temporibus adipisci eos amet, veniam aspernatur fuga minima mollitia doloremque ad numquam
+                            natus
+                            est assumenda laudantium distinctio excepturi!
+                            Assumenda, libero aliquid? Quia numquam nobis omnis illum, minima consequatur deserunt
+                            tempora
+                            iste quisquam vero commodi ipsa dolorem rerum id similique culpa natus nisi, facere magnam
+                            est
+                            illo qui. Adipisci.
+                        </p>
+                        <div class="btn-group">
+                            <button type="button" id="gizle" class="btn btn-danger mr-2">Gizle</button>
+                            <button type="button" id="goster" class="btn btn-primary">Göster</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="aside-image">
+            <h3 class="text-header" id="sss">S.S.S</h3>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div id="showsss">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta, commodi similique minima
+                            doloribus, numquam totam quo, nihil repellendus doloremque illum vitae laudantium error
+                            exercitationem officiis iure natus eius voluptate repellat.
+                            Cum magnam recusandae atque saepe laborum praesentium eligendi voluptates modi maiores
+                            perspiciatis, voluptas quae, dolores commodi aperiam aliquid totam nobis, impedit sed
+                            ducimus voluptatibus possimus adipisci. Molestiae iste soluta maiores?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <!-- main finish -->
+
+
+    <!-- footer start -->
+    <footer id="footer-bottom" class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <ul>
+                        <li><a style="color:white" href=""><i class="fa fa-address-card"></i>Merkez/Bartın</a></li>
+
+                        <li>
+                            <a href="" style="color:white"> <i class="fa fa-phone"></i>Tel: +90 5555 444 33</a>
+                        </li>
+                        <li>
+                            <a href="" style="color:white"> <i class="fa fa-envelope"></i>furkan74er@gmail.com</a>
+                        </li>
+                    </ul>
+
+                    <div id="social">
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-linkedin"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control" required autofocus
+                                placeholder="adınız ve soyadınız"></div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" required placeholder="emailiniz"></div>
+
+                        <div class="form-group">
+
+                            <textarea class="form-control" required placeholder="Mesajınız" name="" id="mesaj" cols="30"
+                                rows="3"></textarea>
+                            <div id="paragraf_sayi"></div>
+                        </div>
+
+                        <div class="btn-group">
+                            <input type="reset" value="Temizle" class="btn btn-danger mr-2">
+                            <input type="submit" value="Gönder" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div style="background-color: black; color:#fff; height: 5rem; padding-top:1.4rem; "
+            class="col-md-12 text-center mt-5">
+            &copy; Bütün haklar saklıdır
+        </div>
+    </footer>
+    <!-- footer finish -->
+
+    <!-- scroolspy -->
+    <div class="scrollspy-footer">
+        <a href="#back-top"><i style="font-size:1rem;" class="fa fa-arrow-up"></i> </a>
+    </div>
+    <!-- finish codes -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- External Js:  Bütün proje için kullanıyoruz. -->
+    <script src="js/template.js"></script>
+</body>
+
+</html>

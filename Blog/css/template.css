@@ -1,0 +1,156 @@
+/* genel ayarlar */
+* {
+    padding: 0;
+    margin: 0 px;
+    box-sizing: border-box;
+    /* padding+height +border= 140px */
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Bitter', serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.f20 {
+    font-size: 1rem
+        /*10px */
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.text-header {
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: .4px .5px black;
+    box-shadow: 1px 2px 3px 4px rgba(0, 0, 0.9);
+    margin-bottom: 1.8rem;
+    padding: 1rem;
+}
+
+/* main */
+.card-header-img {
+    width: 15rem;
+    height: 8rem;
+    margin-bottom: .8rem;
+
+}
+
+.card-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container .row .col-sm-4 .card {
+    box-shadow: 2px 1px 8px 1px black;
+    transition: all 1s;
+    margin-bottom: .8rem;
+}
+
+.container .row .col-sm-4 .card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 12px 1px black;
+
+}
+
+#aside-image {
+    margin: 2rem 0;
+}
+
+#aside-image img {
+    height: 18rem;
+    width: 100%;
+}
+
+#aside-image #aside-p {
+    text-align: justify;
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp-3{
+    text-align: justify;
+}
+
+
+/* scrollspy-foote*/
+.scrollspy-footer {
+    opacity: 0.5;
+    color: black;
+    max-height: 2rem;
+    max-width: 3rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 35px;
+    margin-bottom:15px;
+    padding: .1rem .4rem;
+    border-radius: 30%;
+    
+}
+.scrollspy-footer a:hover {
+
+    transition: all 0.6s;
+    background-color: rgb(61, 61, 61);
+    
+}
+
+.scrollspy-footer a {
+    font-size: 1rem;
+    margin-right: 2rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    border-radius: 80%;
+}
+
+/* footer */
+#footer-bottom {
+    height: 25rem;
+    padding-top: 2rem;
+}
+
+ul li i {
+    margin-right: .6rem;
+    ;
+}
+
+#social i {
+    margin-right: .8rem;
+}
